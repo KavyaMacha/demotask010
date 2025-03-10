@@ -20,10 +20,5 @@
   },
   "tracing_mode": "Active",
   "ephemeral_storage": 512,
-  "tags": {},
-  "tracingConfig": {
-    "mode": "Active"
-  }
-
-
+  "tags": {}
 }
