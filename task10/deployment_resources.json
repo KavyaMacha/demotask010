@@ -16,6 +16,7 @@
             "ssm:GetParameter",
             "kms:Decrypt",
             "xray:PutTraceSegments",
+            "xray:PutTelemetryRecords",
             "xray:PutTelemetryRecords"
           ],
           "Effect": "Allow",
@@ -28,6 +29,16 @@
     "tags": {}
   },
   "${target_table}": {
+    "resource_type": "dynamodb_table",
+    "hash_key_name": "id",
+    "hash_key_type": "S",
+    "read_capacity": 1,
+    "write_capacity": 1,
+    "global_indexes": [],
+    "autoscaling": [],
+    "tags": {}
+  },
+  "Weather": {
     "resource_type": "dynamodb_table",
     "hash_key_name": "id",
     "hash_key_type": "S",
